@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelaria Dourada - O Sabor da Tradicao</title>
+    <link rel="icon" type="image/png" href="favicon1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="logoRetangulocabeçalho.png" alt="Pastelaria Dourada" class="logo-img">
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link">Inicio</a>
+                <a href="#cardapio" class="nav-link">Cardapio</a>
+                <a href="#encomendas" class="nav-link">Encomendas</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary btn-header">Peca Agora</a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <span class="hero-badge">&#11088; Pastel Artesanal</span>
+                    <h1 class="hero-title">Crocante por fora, <span class="dourado">suculento</span> por dentro.</h1>
+                    <p class="hero-subtitle">O verdadeiro sabor do pastel artesanal. Massa sequinha, ingredientes fresquinhos e aquele recheio que transborda. Faca seu pedido online!</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-whatsapp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Pedir pelo WhatsApp
+                        </a>
+                        <a href="#cardapio" class="btn btn-outline">Ver Cardapio</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-pastel-visual">
+                        <img src="pastel hero inicial.png" alt="Pastel artesanal" class="hero-img">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-qualities">
+                <div class="quality-card">
+                    <span class="quality-number">100%</span>
+                    <span class="quality-label">ARTESANAL</span>
+                </div>
+                <div class="quality-card">
+                    <span class="quality-number">50+</span>
+                    <span class="quality-label">RECHEIOS</span>
+                </div>
+                <div class="quality-card">
+                    <span class="quality-number">Quentinho</span>
+                    <span class="quality-label">SEMPRE NA HORA</span>
+                </div>
+                <div class="quality-card">
+                    <span class="quality-number">Rapida</span>
+                    <span class="quality-label">ENTREGA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cardapio" id="cardapio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#127854; Nosso Cardapio</span>
+                <h2 class="section-title">Escolha seu Recheio Favorito</h2>
+                <p class="section-subtitle">Massa sequinha, ingredientes fresquinhos e aquele recheio que transborda</p>
+            </div>
+
+            <div class="categorias">
+                <button class="cat-btn active" data-categoria="todos">Todos</button>
+                <button class="cat-btn" data-categoria="tradicional">Tradicional</button>
+                <button class="cat-btn" data-categoria="artesanal">Artesanal</button>
+                <button class="cat-btn" data-categoria="gourmet">Gourmet</button>
+                <button class="cat-btn" data-categoria="vegetariano">Vegetariano</button>
+                <button class="cat-btn" data-categoria="doce">Doce</button>
+            </div>
+
+            <div class="grid-pasteis">
+                <div class="pastel-card" data-categoria="tradicional">
+                    <div class="pastel-badge">Classico</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Carne</h3>
+                    <p class="pastel-desc">Carne moida temperada com cebola e azeitona</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 8,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="tradicional">
+                    <div class="pastel-badge">Classico</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Queijo</h3>
+                    <p class="pastel-desc">Queijo mussarela derretido e irresistivel</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 7,50</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="tradicional">
+                    <div class="pastel-badge">Classico</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Frango</h3>
+                    <p class="pastel-desc">Desfiado com catupiry cremoso</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 8,50</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="artesanal">
+                    <div class="pastel-badge badge-artesanal">Artesanal</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Palmito</h3>
+                    <p class="pastel-desc">Palmito com cream cheese e ervas finas</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 9,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="artesanal">
+                    <div class="pastel-badge badge-artesanal">Artesanal</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Camarao</h3>
+                    <p class="pastel-desc">Camarao ao molho escabeche</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 14,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="gourmet">
+                    <div class="pastel-badge badge-gourmet">Gourmet</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de File</h3>
+                    <p class="pastel-desc">File mignon com queijo gouda e cebola caramelizada</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 16,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="gourmet">
+                    <div class="pastel-badge badge-gourmet">Gourmet</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Costela</h3>
+                    <p class="pastel-desc">Costela desfiada ao molho barbecue defumado</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 15,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="vegetariano">
+                    <div class="pastel-badge badge-veg">Vegetariano</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Espinafre</h3>
+                    <p class="pastel-desc">Espinafre com ricota e noz-moscada</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 9,50</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="vegetariano">
+                    <div class="pastel-badge badge-veg">Vegetariano</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Cogumelo</h3>
+                    <p class="pastel-desc">Cogumelos frescos com queijo brie</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 11,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="doce">
+                    <div class="pastel-badge badge-doce">Doce</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Nutella</h3>
+                    <p class="pastel-desc">Nutella com morangos frescos</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 12,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="doce">
+                    <div class="pastel-badge badge-doce">Doce</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Beijinho</h3>
+                    <p class="pastel-desc">Coco com leite condensado</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 9,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+
+                <div class="pastel-card" data-categoria="doce">
+                    <div class="pastel-badge badge-doce">Doce</div>
+                    <span class="pastel-card-emoji">&#127854;</span>
+                    <h3 class="pastel-name">Pastel de Romeo e Julieta</h3>
+                    <p class="pastel-desc">Goabada com queijo minas</p>
+                    <div class="pastel-price">
+                        <span class="preco">R$ 10,00</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Pedir Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-grid">
+                <div class="sobre-visual">
+                    <div class="sobre-emoji-wrap">
+                        <span class="sobre-emoji">&#127854;</span>
+                    </div>
+                </div>
+                <div class="sobre-content">
+                    <span class="section-tag">&#10084; Sobre Nos</span>
+                    <h2 class="section-title">A <span class="dourado">Pastelaria Dourada</span></h2>
+                    <p class="sobre-text">Ha mais de 10 anos servindo a comunidade com dedicacao e carinho. Nosso compromisso e oferecer pasteis artesanais de qualidade, feitos com receita de familia e ingredientes selecionados.</p>
+                    <p class="sobre-text">Cada pastel e feito com muito amor e sabor, para que cada mordida seja uma experiencia inesquecivel.</p>
+                    <div class="sobre-features">
+                        <div class="sobre-feature">
+                            <span class="sobre-feature-icon">&#10004;</span>
+                            <div>
+                                <strong>Receita de Familia</strong>
+                                <p>Tradicao e carinho em cada pastel</p>
+                            </div>
+                        </div>
+                        <div class="sobre-feature">
+                            <span class="sobre-feature-icon">&#10004;</span>
+                            <div>
+                                <strong>Ingredientes Frescos</strong>
+                                <p>Qualidade que voce sente no sabor</p>
+                            </div>
+                        </div>
+                        <div class="sobre-feature">
+                            <span class="sobre-feature-icon">&#10004;</span>
+                            <div>
+                                <strong>Feito na Hora</strong>
+                                <p>Sempre quentinho e crocante</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section encomendas" id="encomendas">
+        <div class="container">
+            <div class="encomendas-grid">
+                <div class="encomendas-content">
+                    <span class="section-tag">&#127873; Encomendas</span>
+                    <h2 class="section-title">Pasteis para <span class="dourado">Suas Festas</span></h2>
+                    <p class="encomendas-text">Aquele pastelzinho caprichado que faz o seu dia muito mais feliz. Fazemos encomendas para festas, eventos e confraternizacoes. Feito com receita de familia, recheado com muito amor e sabor.</p>
+                    <ul class="lista-encomendas">
+                        <li><span class="check">&#10004;</span> Festas e aniversarios</li>
+                        <li><span class="check">&#10004;</span> Confraternizacoes</li>
+                        <li><span class="check">&#10004;</span> Eventos corporativos</li>
+                        <li><span class="check">&#10004;</span> Quantidades a partir de 50 unidades</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Solicitar Encomenda
+                    </a>
+                </div>
+                <div class="encomendas-visual">
+                    <div class="encomendas-card">
+                        <span class="encomendas-card-icon">&#127873;</span>
+                        <h3>Festas</h3>
+                        <p>Aniversarios e comemoracoes</p>
+                    </div>
+                    <div class="encomendas-card">
+                        <span class="encomendas-card-icon">&#127970;</span>
+                        <h3>Empresas</h3>
+                        <p>Confraternizacoes e eventos</p>
+                    </div>
+                    <div class="encomendas-card">
+                        <span class="encomendas-card-icon">&#128172;</span>
+                        <h3>Fale Conosco</h3>
+                        <p>Tire suas duvidas pelo WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&#11088; Depoimentos</span>
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <p class="section-subtitle">A satisfacao de quem confia na Pastelaria Dourada</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                    <p class="testimonial-text">"Melhor pastel da cidade! A massa e super crocante e o recheio e generoso demais. Ja pedi varias vezes e nunca me decepciono."</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-name">Maria S.</span>
+                        <span class="testimonial-role">Cliente ha 6 meses</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                    <p class="testimonial-text">"Sabor de infancia em cada mordida. Faz lembrar os pastels da vovo. Atendimento otimo e entrega rapida!"</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-name">Pedro H.</span>
+                        <span class="testimonial-role">Cliente ha 1 ano</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                    <p class="testimonial-text">"Fiz uma encomenda para o aniversario do meu filho e todos amaram! Pasteis saborosos e bem feitos. Super recomendo!"</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-name">Ana C.</span>
+                        <span class="testimonial-role">Cliente ha 3 meses</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                    <p class="testimonial-text">"Os pastels gourmet sao incriveis! O de file com gouda e o melhor que ja comi. Preco justo e sabor incomparavel."</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-name">Lucas M.</span>
+                        <span class="testimonial-role">Cliente ha 8 meses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta" id="contato">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2 class="cta-title">Deu agua na boca? <span class="dourado">Peca agora!</span></h2>
+                    <p class="cta-text">O seu pastel quentinho e na hora esta a apenas um clique de distancia. Escolha seu recheio favorito e deixe o resto com a gente!</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-whatsapp btn-lg">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Pedir pelo WhatsApp
+                        </a>
+                        <a href="#" class="btn btn-outline btn-lg">Pedir pelo iFood</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="logoRetangulocabeçalho.png" alt="Pastelaria Dourada" class="logo-img">
+                    </a>
+                    <p class="footer-desc">Do balcao para a sua casa: o melhor pastel artesanal a um clique de distancia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Horario</h4>
+                    <ul class="footer-list">
+                        <li>Seg - Sab: 10h as 22h</li>
+                        <li>Domingo: 11h as 21h</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contato</h4>
+                    <ul class="footer-list">
+                        <li>&#128205; Rua das Delicias, 123</li>
+                        <li>&#128222; (11) 99999-9999</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">&#128247; Instagram</a>
+                        <a href="#" class="social-link" aria-label="Facebook">&#128100; Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pastelaria Dourada. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <svg class="whats-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="whats-text">Fale conosco</span>
+    </a>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+        const navOverlay = document.getElementById('navOverlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        document.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const categoria = this.dataset.categoria;
+                document.querySelectorAll('.pastel-card').forEach(card => {
+                    if (categoria === 'todos' || card.dataset.categoria === categoria) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
